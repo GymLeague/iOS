@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C48425B14AB9227E76A55571 /* Pods_GymLeagueiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E69A888FCF69F1C0626723C /* Pods_GymLeagueiOS.framework */; };
 		D8CE37241DD17698000B04D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE37231DD17698000B04D9 /* AppDelegate.swift */; };
 		D8CE37261DD17698000B04D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE37251DD17698000B04D9 /* ViewController.swift */; };
 		D8CE37291DD17698000B04D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8CE37271DD17698000B04D9 /* Main.storyboard */; };
@@ -16,6 +17,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E69A888FCF69F1C0626723C /* Pods_GymLeagueiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GymLeagueiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C26A6162E07A3641C0267217 /* Pods-GymLeagueiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymLeagueiOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-GymLeagueiOS/Pods-GymLeagueiOS.release.xcconfig"; sourceTree = "<group>"; };
+		D67163B2E636A25723025EBF /* Pods-GymLeagueiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymLeagueiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GymLeagueiOS/Pods-GymLeagueiOS.debug.xcconfig"; sourceTree = "<group>"; };
+		D8AFDD1F1DD2C89F006C67C6 /* GymLeagueiOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GymLeagueiOS.entitlements; sourceTree = "<group>"; };
 		D8CE37201DD17698000B04D9 /* GymLeagueiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymLeagueiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8CE37231DD17698000B04D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8CE37251DD17698000B04D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,17 +36,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C48425B14AB9227E76A55571 /* Pods_GymLeagueiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3FD1FF227C5C0D1528D2844B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D67163B2E636A25723025EBF /* Pods-GymLeagueiOS.debug.xcconfig */,
+				C26A6162E07A3641C0267217 /* Pods-GymLeagueiOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5F65E3EB32933AECAA0FA0FA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0E69A888FCF69F1C0626723C /* Pods_GymLeagueiOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D8CE37171DD17698000B04D9 = {
 			isa = PBXGroup;
 			children = (
 				D8CE37221DD17698000B04D9 /* GymLeagueiOS */,
 				D8CE37211DD17698000B04D9 /* Products */,
+				3FD1FF227C5C0D1528D2844B /* Pods */,
+				5F65E3EB32933AECAA0FA0FA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +81,7 @@
 		D8CE37221DD17698000B04D9 /* GymLeagueiOS */ = {
 			isa = PBXGroup;
 			children = (
+				D8AFDD1F1DD2C89F006C67C6 /* GymLeagueiOS.entitlements */,
 				D8CE37231DD17698000B04D9 /* AppDelegate.swift */,
 				D8CE37251DD17698000B04D9 /* ViewController.swift */,
 				D8CE37271DD17698000B04D9 /* Main.storyboard */,
@@ -74,9 +100,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D8CE37351DD17698000B04D9 /* Build configuration list for PBXNativeTarget "GymLeagueiOS" */;
 			buildPhases = (
+				2C91487B83B0D6ABC1C40EE5 /* [CP] Check Pods Manifest.lock */,
 				D8CE371C1DD17698000B04D9 /* Sources */,
 				D8CE371D1DD17698000B04D9 /* Frameworks */,
 				D8CE371E1DD17698000B04D9 /* Resources */,
+				6247947E3F6EAA5F3A13864D /* [CP] Embed Pods Frameworks */,
+				016C68968720D9005F704929 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -100,7 +129,13 @@
 					D8CE371F1DD17698000B04D9 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = EEL7HA3WWW;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -134,6 +169,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		016C68968720D9005F704929 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GymLeagueiOS/Pods-GymLeagueiOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2C91487B83B0D6ABC1C40EE5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6247947E3F6EAA5F3A13864D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GymLeagueiOS/Pods-GymLeagueiOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D8CE371C1DD17698000B04D9 /* Sources */ = {
@@ -261,8 +344,10 @@
 		};
 		D8CE37361DD17698000B04D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D67163B2E636A25723025EBF /* Pods-GymLeagueiOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GymLeagueiOS/GymLeagueiOS.entitlements;
 				DEVELOPMENT_TEAM = EEL7HA3WWW;
 				INFOPLIST_FILE = GymLeagueiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -274,8 +359,10 @@
 		};
 		D8CE37371DD17698000B04D9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C26A6162E07A3641C0267217 /* Pods-GymLeagueiOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GymLeagueiOS/GymLeagueiOS.entitlements;
 				DEVELOPMENT_TEAM = EEL7HA3WWW;
 				INFOPLIST_FILE = GymLeagueiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -304,6 +391,7 @@
 				D8CE37371DD17698000B04D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
